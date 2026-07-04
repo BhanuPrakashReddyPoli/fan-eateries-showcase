@@ -16,7 +16,7 @@ import {
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 import hero from "@/assets/hero.jpg";
-import habibi from "@/assets/habibi.jpg";
+import habibi from "@/assets/habibi.png";
 import mandi from "@/assets/mandi.jpg";
 import nuha from "@/assets/nuha.jpg";
 import mentor from "@/assets/mentor.jpg";
@@ -45,7 +45,15 @@ const fadeUp = {
   }),
 };
 
-function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Reveal({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
       variants={fadeUp}
@@ -69,7 +77,17 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PrimaryButton({ children, href, onClick, type = "button" }: { children: React.ReactNode; href?: string; onClick?: () => void; type?: "button" | "submit" }) {
+function PrimaryButton({
+  children,
+  href,
+  onClick,
+  type = "button",
+}: {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit";
+}) {
   const Cmp: any = href ? "a" : "button";
   return (
     <Cmp
@@ -89,7 +107,15 @@ function PrimaryButton({ children, href, onClick, type = "button" }: { children:
   );
 }
 
-function GlassButton({ children, href, onClick }: { children: React.ReactNode; href?: string; onClick?: () => void }) {
+function GlassButton({
+  children,
+  href,
+  onClick,
+}: {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+}) {
   const Cmp: any = href ? "a" : "button";
   return (
     <Cmp
@@ -134,27 +160,46 @@ function Nav() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8"
     >
-      <div className={`glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-2.5 pl-6 transition-all duration-500 ${scrolled ? "bg-white/80" : ""}`}>
+      <div
+        className={`glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-2.5 pl-6 transition-all duration-500 ${scrolled ? "bg-white/80" : ""}`}
+      >
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-8 w-8 place-items-center rounded-full gold-gradient text-[10px] font-semibold text-white">FE</span>
+          <span className="grid h-8 w-8 place-items-center rounded-full gold-gradient text-[10px] font-semibold text-white">
+            FE
+          </span>
           <span className="text-[15px] font-semibold tracking-tight">Fan Eateries</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map(([label, href]) => (
-            <a key={href} href={href} className="text-[13px] text-muted-foreground transition-colors hover:text-foreground">
+            <a
+              key={href}
+              href={href}
+              className="text-[13px] text-muted-foreground transition-colors hover:text-foreground"
+            >
               {label}
             </a>
           ))}
         </nav>
         <div className="hidden md:block">
-          <a href="#enquiry" className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-[13px] text-primary-foreground transition-transform hover:-translate-y-0.5">
+          <a
+            href="#enquiry"
+            className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-[13px] text-primary-foreground transition-transform hover:-translate-y-0.5"
+          >
             Enquire <HiOutlineArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
-        <button onClick={() => setOpen(!open)} className="md:hidden rounded-full p-2" aria-label="Menu">
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden rounded-full p-2"
+          aria-label="Menu"
+        >
           <div className="space-y-1.5">
-            <span className={`block h-px w-5 bg-foreground transition-all ${open ? "translate-y-1 rotate-45" : ""}`} />
-            <span className={`block h-px w-5 bg-foreground transition-all ${open ? "-translate-y-1 -rotate-45" : ""}`} />
+            <span
+              className={`block h-px w-5 bg-foreground transition-all ${open ? "translate-y-1 rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-px w-5 bg-foreground transition-all ${open ? "-translate-y-1 -rotate-45" : ""}`}
+            />
           </div>
         </button>
       </div>
@@ -162,9 +207,22 @@ function Nav() {
         <div className="glass mx-auto mt-2 max-w-7xl rounded-3xl p-6 md:hidden">
           <div className="flex flex-col gap-3">
             {links.map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setOpen(false)} className="text-lg text-foreground/90">{label}</a>
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="text-lg text-foreground/90"
+              >
+                {label}
+              </a>
             ))}
-            <a href="#enquiry" onClick={() => setOpen(false)} className="mt-2 inline-flex w-fit rounded-full bg-foreground px-5 py-2.5 text-sm text-primary-foreground">Enquire</a>
+            <a
+              href="#enquiry"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex w-fit rounded-full bg-foreground px-5 py-2.5 text-sm text-primary-foreground"
+            >
+              Enquire
+            </a>
           </div>
         </div>
       )}
@@ -186,8 +244,18 @@ function Hero() {
     <section id="top" ref={ref} className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
       {/* Abstract shapes */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full opacity-60 blur-3xl" style={{ background: "radial-gradient(closest-side, oklch(0.9 0.08 82 / 0.6), transparent 70%)" }} />
-        <div className="absolute -bottom-40 right-0 h-[600px] w-[600px] rounded-full opacity-70 blur-3xl" style={{ background: "radial-gradient(closest-side, oklch(0.94 0.03 80), transparent 70%)" }} />
+        <div
+          className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full opacity-60 blur-3xl"
+          style={{
+            background: "radial-gradient(closest-side, oklch(0.9 0.08 82 / 0.6), transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute -bottom-40 right-0 h-[600px] w-[600px] rounded-full opacity-70 blur-3xl"
+          style={{
+            background: "radial-gradient(closest-side, oklch(0.94 0.03 80), transparent 70%)",
+          }}
+        />
         <div className="absolute inset-x-0 top-0 h-full bg-[linear-gradient(to_bottom,transparent,var(--surface))]" />
       </div>
 
@@ -208,7 +276,8 @@ function Hero() {
             </Reveal>
             <Reveal delay={2}>
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                A modern hospitality company operating a portfolio of distinctive restaurant brands, engineered around operational excellence, culinary craft, and lasting guest trust.
+                A modern hospitality company operating a portfolio of distinctive restaurant brands,
+                engineered around operational excellence, culinary craft, and lasting guest trust.
               </p>
             </Reveal>
             <Reveal delay={3}>
@@ -235,7 +304,13 @@ function Hero() {
 
           <motion.div style={{ y }} className="relative lg:col-span-5">
             <div className="relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-lift)]">
-              <img src={hero} alt="Modern restaurant interior" width={1920} height={1280} className="h-[520px] w-full object-cover md:h-[640px]" />
+              <img
+                src={hero}
+                alt="Modern restaurant interior"
+                width={1920}
+                height={1280}
+                className="h-[520px] w-full object-cover md:h-[640px]"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
 
@@ -283,18 +358,35 @@ function Hero() {
 
 function About() {
   const pillars = [
-    ["Premium Hospitality", "Every touchpoint is designed for warmth, precision, and elevated guest comfort."],
-    ["Operational Excellence", "Standardised systems and daily discipline across every outlet we operate."],
-    ["Food Innovation", "A craft-driven kitchen culture — recipes tested, refined, and quietly perfected."],
-    ["Customer Satisfaction", "We measure success by return visits, referrals, and long-term guest trust."],
-    ["Sustainable Growth", "Deliberate expansion into markets where we can deliver our full standard."],
+    [
+      "Premium Hospitality",
+      "Every touchpoint is designed for warmth, precision, and elevated guest comfort.",
+    ],
+    [
+      "Operational Excellence",
+      "Standardised systems and daily discipline across every outlet we operate.",
+    ],
+    [
+      "Food Innovation",
+      "A craft-driven kitchen culture — recipes tested, refined, and quietly perfected.",
+    ],
+    [
+      "Customer Satisfaction",
+      "We measure success by return visits, referrals, and long-term guest trust.",
+    ],
+    [
+      "Sustainable Growth",
+      "Deliberate expansion into markets where we can deliver our full standard.",
+    ],
   ];
   return (
     <section id="about" className="relative py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Reveal><Eyebrow>About Fan Eateries</Eyebrow></Reveal>
+            <Reveal>
+              <Eyebrow>About Fan Eateries</Eyebrow>
+            </Reveal>
             <Reveal delay={1}>
               <h2 className="display mt-6 text-4xl leading-[1.05] md:text-5xl lg:text-6xl">
                 A modern hospitality house behind three distinct brands.
@@ -302,13 +394,17 @@ function About() {
             </Reveal>
             <Reveal delay={2}>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Fan Eateries is a Bangalore-based restaurant management company that builds and operates focused, high-quality food brands. We stand as the parent organisation behind Habibi Fried Chicken, Mashriq Mandi and Nuha Cafe — each with its own identity, held together by a shared operational standard.
+                Fan Eateries is a Bangalore-based restaurant management company that builds and
+                operates focused, high-quality food brands. We stand as the parent organisation
+                behind Habibi Fried Chicken, Mashriq Mandi and Nuha Cafe — each with its own
+                identity, held together by a shared operational standard.
               </p>
             </Reveal>
             <Reveal delay={3}>
               <div className="hairline mt-10" />
               <p className="mt-6 text-sm text-muted-foreground">
-                We do not sell online. Guests reach our restaurants through Swiggy, Zomato, Ownly, Swiggy Dineout and Zomato Gold.
+                We do not sell online. Guests reach our restaurants through Swiggy, Zomato, Ownly,
+                Swiggy Dineout and Zomato Gold.
               </p>
             </Reveal>
           </div>
@@ -353,36 +449,49 @@ const brands: Brand[] = [
     name: "Habibi Fried Chicken",
     monogram: "HFC",
     cuisine: "Signature Fried Chicken",
-    description: "Golden, crisp and unmistakably ours — Habibi is our flagship fried chicken concept, built on a proprietary recipe and a fast, precise service model.",
+    description:
+      "Golden, crisp and unmistakably ours — Habibi is our flagship fried chicken concept, built on a proprietary recipe and a fast, precise service model.",
     image: habibi,
     services: [
-      { label: "Swiggy", href: "https://www.swiggy.com" },
-      { label: "Zomato", href: "https://www.zomato.com" },
-      { label: "Ownly", href: "https://www.ownly.in" },
+      { label: "Visit", href: "https://habibi-craft.vercel.app/" },
+      {
+        label: "Swiggy",
+        href: "https://www.swiggy.com/city/bangalore/habibi-fried-chicken-koramangala-rest1283797",
+      },
+      { label: "Zomato", href: "https://zomato.onelink.me/xqzv/q9nciwau" },
     ],
   },
   {
     name: "Mashriq Mandi",
     monogram: "MM",
     cuisine: "Authentic Arabian Mandi",
-    description: "Slow-cooked, aromatic and true to origin. Mashriq brings a refined Arabian mandi experience to Bangalore diners who value craft and tradition.",
+    description:
+      "Slow-cooked, aromatic and true to origin. Mashriq brings a refined Arabian mandi experience to Bangalore diners who value craft and tradition.",
     image: mandi,
     services: [
-      { label: "Swiggy", href: "https://www.swiggy.com" },
-      { label: "Zomato", href: "https://www.zomato.com" },
-      { label: "Ownly", href: "https://www.ownly.in" },
+      { label: "Visit", href: "https://www.mashriqmandi.com" },
+      {
+        label: "Swiggy",
+        href: "https://www.swiggy.com/city/bangalore/mashriq-mandi-koramangala-rest1285732",
+      },
+      { label: "Zomato", href: "https://zomato.onelink.me/xqzv/7qhs5x8q" },
     ],
   },
   {
     name: "Nuha Cafe",
     monogram: "NC",
     cuisine: "Specialty Coffee & All-Day Cafe",
-    description: "A calm, contemporary all-day cafe — thoughtful coffee, honest food, and a warm neighbourhood atmosphere designed for regulars.",
+    description:
+      "A calm, contemporary all-day cafe — thoughtful coffee, honest food, and a warm neighbourhood atmosphere designed for regulars.",
     image: nuha,
     services: [
-      { label: "Swiggy", href: "https://www.swiggy.com" },
-      { label: "Zomato", href: "https://www.zomato.com" },
-      { label: "Ownly", href: "https://www.ownly.in" },
+      { label: "Visit", href: "https://nuha-patisseries-cafe.vercel.app/" },
+
+      {
+        label: "Swiggy",
+        href: "https://www.swiggy.com/city/bangalore/nuha-patisserie-and-cafe-indiranagar-rest1283859",
+      },
+      { label: "Zomato", href: "https://zomato.onelink.me/xqzv/zq9q0hp8" },
     ],
   },
 ];
@@ -392,9 +501,22 @@ function Brands() {
     <section id="brands" className="relative py-28 md:py-40" style={{ background: "var(--pearl)" }}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal><div className="flex justify-center"><Eyebrow>Our Brands</Eyebrow></div></Reveal>
-          <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Three brands. One standard.</h2></Reveal>
-          <Reveal delay={2}><p className="mt-6 text-lg text-muted-foreground">A tightly curated portfolio, each concept engineered around a specific guest and cuisine.</p></Reveal>
+          <Reveal>
+            <div className="flex justify-center">
+              <Eyebrow>Our Brands</Eyebrow>
+            </div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Three brands. One standard.
+            </h2>
+          </Reveal>
+          <Reveal delay={2}>
+            <p className="mt-6 text-lg text-muted-foreground">
+              A tightly curated portfolio, each concept engineered around a specific guest and
+              cuisine.
+            </p>
+          </Reveal>
         </div>
 
         <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -402,21 +524,43 @@ function Brands() {
             <Reveal key={b.name} delay={i}>
               <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] bg-white shadow-[var(--shadow-glass)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
                 <div className="relative overflow-hidden">
-                  <img src={b.image} alt={b.name} loading="lazy" width={1200} height={1200} className="h-72 w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105" />
-                  <div className="absolute left-4 top-4 glass rounded-full px-3 py-1 text-[11px] font-medium">{b.cuisine}</div>
-                  <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full glass-strong text-xs font-semibold">{b.monogram}</div>
+                  <img
+                    src={b.image}
+                    alt={b.name}
+                    loading="lazy"
+                    width={1200}
+                    height={1200}
+                    className="h-72 w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute left-4 top-4 glass rounded-full px-3 py-1 text-[11px] font-medium">
+                    {b.cuisine}
+                  </div>
+                  <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full glass-strong text-xs font-semibold">
+                    {b.monogram}
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col p-7">
                   <h3 className="display text-2xl">{b.name}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{b.description}</p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {b.description}
+                  </p>
                   <div className="mt-6">
-                    <a href="#presence" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
+                    <a
+                      href="#presence"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground"
+                    >
                       Learn more <HiArrowUpRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                   <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-6">
                     {b.services.map((s) => (
-                      <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-border bg-surface px-3 py-1.5 text-[12px] font-medium text-foreground transition-all hover:border-gold hover:bg-white">
+                      <a
+                        key={s.label}
+                        href={s.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 rounded-full border border-border bg-surface px-3 py-1.5 text-[12px] font-medium text-foreground transition-all hover:border-gold hover:bg-white"
+                      >
                         {s.label} <HiArrowUpRight className="h-3 w-3" />
                       </a>
                     ))}
@@ -437,47 +581,104 @@ function Brands() {
 
 function Leadership() {
   const directors = [
-    { name: "Bhanu", role: "Director — Mashriq Mandi", img: director1 },
-    { name: "Sai", role: "Director — Habibi Fried Chicken", img: director2 },
-    { name: "Manju", role: "Director — Nuha Cafe", img: director3 },
+    { name: "Arbaz Sharrif", role: "Director — Habibi Fried Chicken", img: director1 },
+    { name: "Faraz Sharrif", role: "Director — Mashriq Mandi", img: director2 },
+    { name: "Nuha Sharrif", role: "Director — Nuha Patisserie and Cafe", img: director3 },
   ];
 
   return (
     <section id="leadership" className="relative py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal><div className="flex justify-center"><Eyebrow>Leadership</Eyebrow></div></Reveal>
-          <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Guided by mentorship. Led by family.</h2></Reveal>
+          <Reveal>
+            <div className="flex justify-center">
+              <Eyebrow>Leadership</Eyebrow>
+            </div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Guided by mentorship. Led by family.
+            </h2>
+          </Reveal>
         </div>
 
-        {/* Mentor card */}
-        <Reveal delay={1}>
-          <article className="mt-20 grid overflow-hidden rounded-[2.25rem] bg-white shadow-[var(--shadow-lift)] md:grid-cols-12">
-            <div className="relative md:col-span-5">
-              <img src={mentor} alt="Executive Mentor" loading="lazy" width={1024} height={1280} className="h-full min-h-[420px] w-full object-cover" />
-              <div className="absolute inset-x-6 bottom-6 glass rounded-2xl p-4">
-                <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-bronze">Mentor & Strategic Advisor</div>
+        {/* Mentor Cards */}
+        <div className="mt-20 grid gap-8 md:grid-cols-2 items-stretch">
+          {/* Mentor 1 */}
+          <Reveal delay={1}>
+            <article className="h-full flex flex-col items-center rounded-[2.25rem] bg-white shadow-[var(--shadow-lift)] p-10 text-center">
+              <img
+                src={mentor}
+                alt="Executive Mentor"
+                loading="lazy"
+                width={220}
+                height={220}
+                className="h-44 w-44 rounded-full object-cover border-4 border-gold shadow-lg"
+              />
+
+              <div className="mt-6 glass rounded-full px-5 py-2">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-bronze">
+                  Mentor & Strategic Advisor
+                </span>
               </div>
-            </div>
-            <div className="flex flex-col justify-center gap-6 p-10 md:col-span-7 md:p-14">
-              <Eyebrow>The Mentor</Eyebrow>
-              <h3 className="display text-4xl md:text-5xl">A guiding hand behind Fan Eateries.</h3>
-              <p className="text-muted-foreground">
-                A senior hospitality mind whose counsel shapes strategy, standards and long-term direction — quietly present in every major decision the group takes.
+
+              <Eyebrow className="mt-6">Navaj Sharief</Eyebrow>
+
+              <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
+
+              <p className="mt-4 text-muted-foreground leading-7">
+                A senior hospitality mind whose counsel shapes strategy, standards and long-term
+                direction—quietly present in every major decision the group takes.
               </p>
-              <figure className="border-l-2 border-gold pl-5">
-                <blockquote className="display text-xl italic leading-snug text-foreground/90">
-                  "Great restaurants are not built in a season. They are built one guest, one shift, one honest plate at a time."
-                </blockquote>
-                <figcaption className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">— Mentor, Fan Eateries</figcaption>
+
+              <figure className="mt-8 border-t border-gold/20 pt-6">
+                <blockquote className="display italic text-lg text-foreground/90"></blockquote>
+
+                <figcaption className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground"></figcaption>
               </figure>
-            </div>
-          </article>
-        </Reveal>
+            </article>
+          </Reveal>
+
+          {/* Mentor 2 */}
+          <Reveal delay={1.2}>
+            <article className="h-full flex flex-col items-center rounded-[2.25rem] bg-white shadow-[var(--shadow-lift)] p-10 text-center">
+              <img
+                src={mentor}
+                alt="Executive Mentor"
+                loading="lazy"
+                width={220}
+                height={220}
+                className="h-44 w-44 rounded-full object-cover border-4 border-gold shadow-lg"
+              />
+
+              <div className="mt-6 glass rounded-full px-5 py-2">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-bronze">
+                  Mentor & Strategic Advisor
+                </span>
+              </div>
+
+              <Eyebrow className="mt-6">Mrs. Navaj Sharief</Eyebrow>
+
+              <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
+
+              <p className="mt-4 text-muted-foreground leading-7">
+                A senior hospitality mind whose counsel shapes strategy, standards and long-term
+                direction—quietly present in every major decision the group takes.
+              </p>
+
+              <figure className="mt-8 border-t border-gold/20 pt-6">
+                <blockquote className="display italic text-lg text-foreground/90"></blockquote>
+
+                <figcaption className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground"></figcaption>
+              </figure>
+            </article>
+          </Reveal>
+        </div>
 
         <Reveal delay={2}>
           <p className="mx-auto mt-16 max-w-2xl text-center text-muted-foreground">
-            The three directors are brothers — leading Fan Eateries together under the guidance of their mentor.
+            The three directors are brothers — leading Fan Eateries together under the guidance of
+            their mentor.
           </p>
         </Reveal>
 
@@ -486,7 +687,14 @@ function Leadership() {
             <Reveal key={d.name} delay={i}>
               <article className="group overflow-hidden rounded-[2rem] bg-white shadow-[var(--shadow-glass)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
                 <div className="relative overflow-hidden">
-                  <img src={d.img} alt={d.name} loading="lazy" width={1024} height={1280} className="h-80 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                  <img
+                    src={d.img}
+                    alt={d.name}
+                    loading="lazy"
+                    width={1024}
+                    height={1280}
+                    className="h-80 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-7">
                   <h4 className="display text-2xl">{d.name}</h4>
@@ -520,14 +728,103 @@ type Location = {
 };
 
 const locations: Location[] = [
-  { id: "hfc-1", brand: "Habibi Fried Chicken", name: "Habibi — Koramangala", x: 58, y: 60, address: "80 Feet Rd, Koramangala 4th Block", phone: "+91 80 4000 1201", hours: "11:00 — 23:00", services: "Dine-in · Takeaway · Delivery", color: "oklch(0.72 0.12 78)" },
-  { id: "hfc-2", brand: "Habibi Fried Chicken", name: "Habibi — HSR Layout", x: 66, y: 70, address: "27th Main, HSR Sector 2", phone: "+91 80 4000 1202", hours: "11:00 — 23:00", services: "Dine-in · Delivery", color: "oklch(0.72 0.12 78)" },
-  { id: "mm-1", brand: "Mashriq Mandi", name: "Mashriq — Frazer Town", x: 52, y: 32, address: "Mosque Rd, Frazer Town", phone: "+91 80 4000 1301", hours: "12:00 — 23:30", services: "Dine-in · Takeaway · Delivery", color: "oklch(0.55 0.09 55)" },
-  { id: "mm-2", brand: "Mashriq Mandi", name: "Mashriq — Shivajinagar", x: 44, y: 38, address: "Commercial St Cross, Shivajinagar", phone: "+91 80 4000 1302", hours: "12:00 — 23:30", services: "Dine-in · Delivery", color: "oklch(0.55 0.09 55)" },
-  { id: "nc-1", brand: "Nuha Cafe", name: "Nuha — Indiranagar", x: 62, y: 42, address: "100 Feet Rd, Indiranagar", phone: "+91 80 4000 1401", hours: "08:00 — 23:00", services: "Dine-in · Takeaway · Delivery", color: "oklch(0.5 0.02 250)" },
-  { id: "nc-2", brand: "Nuha Cafe", name: "Nuha — Jayanagar", x: 42, y: 68, address: "11th Main, Jayanagar 4th Block", phone: "+91 80 4000 1402", hours: "08:00 — 22:00", services: "Dine-in · Delivery", color: "oklch(0.5 0.02 250)" },
-  { id: "ck", brand: "Cloud Kitchen", name: "Cloud Kitchen — Bommanahalli", x: 60, y: 82, address: "Hosur Rd, Bommanahalli", phone: "+91 80 4000 1500", hours: "10:00 — 23:00", services: "Delivery only", color: "oklch(0.78 0.11 82)" },
-  { id: "cpk", brand: "Central Production Kitchen", name: "Central Production Kitchen", x: 30, y: 52, address: "Peenya Industrial Area, Bangalore", phone: "+91 80 4000 1600", hours: "06:00 — 20:00", services: "Production & Distribution", color: "oklch(0.32 0.02 250)", note: "Our primary production facility where food products, marinades, sauces, ingredients and prepared items are produced and distributed to all Fan Eateries outlets — ensuring consistent quality and standardised taste across the group." },
+  {
+    id: "hfc-1",
+    brand: "Habibi Fried Chicken",
+    name: "Habibi — Koramangala",
+    x: 58,
+    y: 60,
+    address: "80 Feet Rd, Koramangala 4th Block",
+    phone: "+91 80 4000 1201",
+    hours: "11:00 — 23:00",
+    services: "Dine-in · Takeaway · Delivery",
+    color: "oklch(0.72 0.12 78)",
+  },
+  {
+    id: "hfc-2",
+    brand: "Habibi Fried Chicken",
+    name: "Habibi — HSR Layout",
+    x: 66,
+    y: 70,
+    address: "27th Main, HSR Sector 2",
+    phone: "+91 80 4000 1202",
+    hours: "11:00 — 23:00",
+    services: "Dine-in · Delivery",
+    color: "oklch(0.72 0.12 78)",
+  },
+  {
+    id: "mm-1",
+    brand: "Mashriq Mandi",
+    name: "Mashriq — Frazer Town",
+    x: 52,
+    y: 32,
+    address: "Mosque Rd, Frazer Town",
+    phone: "+91 80 4000 1301",
+    hours: "12:00 — 23:30",
+    services: "Dine-in · Takeaway · Delivery",
+    color: "oklch(0.55 0.09 55)",
+  },
+  {
+    id: "mm-2",
+    brand: "Mashriq Mandi",
+    name: "Mashriq — Shivajinagar",
+    x: 44,
+    y: 38,
+    address: "Commercial St Cross, Shivajinagar",
+    phone: "+91 80 4000 1302",
+    hours: "12:00 — 23:30",
+    services: "Dine-in · Delivery",
+    color: "oklch(0.55 0.09 55)",
+  },
+  {
+    id: "nc-1",
+    brand: "Nuha Cafe",
+    name: "Nuha — Indiranagar",
+    x: 62,
+    y: 42,
+    address: "100 Feet Rd, Indiranagar",
+    phone: "+91 80 4000 1401",
+    hours: "08:00 — 23:00",
+    services: "Dine-in · Takeaway · Delivery",
+    color: "oklch(0.5 0.02 250)",
+  },
+  {
+    id: "nc-2",
+    brand: "Nuha Cafe",
+    name: "Nuha — Jayanagar",
+    x: 42,
+    y: 68,
+    address: "11th Main, Jayanagar 4th Block",
+    phone: "+91 80 4000 1402",
+    hours: "08:00 — 22:00",
+    services: "Dine-in · Delivery",
+    color: "oklch(0.5 0.02 250)",
+  },
+  {
+    id: "ck",
+    brand: "Cloud Kitchen",
+    name: "Cloud Kitchen — Bommanahalli",
+    x: 60,
+    y: 82,
+    address: "Hosur Rd, Bommanahalli",
+    phone: "+91 80 4000 1500",
+    hours: "10:00 — 23:00",
+    services: "Delivery only",
+    color: "oklch(0.78 0.11 82)",
+  },
+  {
+    id: "cpk",
+    brand: "Central Production Kitchen",
+    name: "Central Production Kitchen",
+    x: 30,
+    y: 52,
+    address: "Peenya Industrial Area, Bangalore",
+    phone: "+91 80 4000 1600",
+    hours: "06:00 — 20:00",
+    services: "Production & Distribution",
+    color: "oklch(0.32 0.02 250)",
+    note: "Our primary production facility where food products, marinades, sauces, ingredients and prepared items are produced and distributed to all Fan Eateries outlets — ensuring consistent quality and standardised taste across the group.",
+  },
 ];
 
 function Presence() {
@@ -541,12 +838,29 @@ function Presence() {
   ] as const;
 
   return (
-    <section id="presence" className="relative py-28 md:py-40" style={{ background: "var(--surface)" }}>
+    <section
+      id="presence"
+      className="relative py-28 md:py-40"
+      style={{ background: "var(--surface)" }}
+    >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal><div className="flex justify-center"><Eyebrow>Our Presence</Eyebrow></div></Reveal>
-          <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">A growing footprint across Bangalore.</h2></Reveal>
-          <Reveal delay={2}><p className="mt-6 text-lg text-muted-foreground">Outlets, cloud kitchens and our central production facility — all mapped from a single quality standard.</p></Reveal>
+          <Reveal>
+            <div className="flex justify-center">
+              <Eyebrow>Our Presence</Eyebrow>
+            </div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+              A growing footprint across Bangalore.
+            </h2>
+          </Reveal>
+          <Reveal delay={2}>
+            <p className="mt-6 text-lg text-muted-foreground">
+              Outlets, cloud kitchens and our central production facility — all mapped from a single
+              quality standard.
+            </p>
+          </Reveal>
         </div>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-12">
@@ -554,7 +868,11 @@ function Presence() {
           <Reveal delay={1} className="lg:col-span-8">
             <div className="glass-strong relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] p-6">
               {/* Stylized map */}
-              <svg viewBox="0 0 100 75" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
+              <svg
+                viewBox="0 0 100 75"
+                className="absolute inset-0 h-full w-full"
+                preserveAspectRatio="none"
+              >
                 <defs>
                   <linearGradient id="mapBg" x1="0" x2="1" y1="0" y2="1">
                     <stop offset="0%" stopColor="oklch(0.98 0.006 85)" />
@@ -564,18 +882,51 @@ function Presence() {
                 <rect width="100" height="75" fill="url(#mapBg)" />
                 {/* Grid */}
                 {Array.from({ length: 10 }).map((_, i) => (
-                  <line key={`v${i}`} x1={i * 10} y1="0" x2={i * 10} y2="75" stroke="oklch(0.9 0.008 80)" strokeWidth="0.1" />
+                  <line
+                    key={`v${i}`}
+                    x1={i * 10}
+                    y1="0"
+                    x2={i * 10}
+                    y2="75"
+                    stroke="oklch(0.9 0.008 80)"
+                    strokeWidth="0.1"
+                  />
                 ))}
                 {Array.from({ length: 8 }).map((_, i) => (
-                  <line key={`h${i}`} x1="0" y1={i * 10} x2="100" y2={i * 10} stroke="oklch(0.9 0.008 80)" strokeWidth="0.1" />
+                  <line
+                    key={`h${i}`}
+                    x1="0"
+                    y1={i * 10}
+                    x2="100"
+                    y2={i * 10}
+                    stroke="oklch(0.9 0.008 80)"
+                    strokeWidth="0.1"
+                  />
                 ))}
                 {/* Roads */}
-                <path d="M 5 40 Q 40 30 60 45 T 95 55" stroke="oklch(0.85 0.01 80)" strokeWidth="0.6" fill="none" />
-                <path d="M 20 10 Q 30 40 50 55 T 80 70" stroke="oklch(0.85 0.01 80)" strokeWidth="0.5" fill="none" />
-                <path d="M 10 65 Q 45 55 70 30 T 95 15" stroke="oklch(0.85 0.01 80)" strokeWidth="0.5" fill="none" />
+                <path
+                  d="M 5 40 Q 40 30 60 45 T 95 55"
+                  stroke="oklch(0.85 0.01 80)"
+                  strokeWidth="0.6"
+                  fill="none"
+                />
+                <path
+                  d="M 20 10 Q 30 40 50 55 T 80 70"
+                  stroke="oklch(0.85 0.01 80)"
+                  strokeWidth="0.5"
+                  fill="none"
+                />
+                <path
+                  d="M 10 65 Q 45 55 70 30 T 95 15"
+                  stroke="oklch(0.85 0.01 80)"
+                  strokeWidth="0.5"
+                  fill="none"
+                />
                 {/* Water */}
                 <ellipse cx="82" cy="20" rx="10" ry="5" fill="oklch(0.94 0.02 220 / 0.5)" />
-                <text x="82" y="22" textAnchor="middle" fontSize="1.6" fill="oklch(0.5 0.05 220)">Bengaluru</text>
+                <text x="82" y="22" textAnchor="middle" fontSize="1.6" fill="oklch(0.5 0.05 220)">
+                  Bengaluru
+                </text>
               </svg>
 
               {/* Markers */}
@@ -626,19 +977,36 @@ function Presence() {
               className="glass-strong flex h-full flex-col rounded-[2rem] p-7"
             >
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-medium">
-                <span className="h-2 w-2 rounded-full" style={{ background: active.color }} /> {active.brand}
+                <span className="h-2 w-2 rounded-full" style={{ background: active.color }} />{" "}
+                {active.brand}
               </span>
               <h3 className="display mt-5 text-2xl">{active.name}</h3>
-              {active.note && <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{active.note}</p>}
+              {active.note && (
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{active.note}</p>
+              )}
               <ul className="mt-6 space-y-4 text-sm">
-                <li className="flex gap-3"><HiOutlineMapPin className="mt-0.5 h-4 w-4 text-bronze" /><span>{active.address}</span></li>
-                <li className="flex gap-3"><HiOutlinePhone className="mt-0.5 h-4 w-4 text-bronze" /><span>{active.phone}</span></li>
-                <li className="flex gap-3"><HiOutlineClock className="mt-0.5 h-4 w-4 text-bronze" /><span>{active.hours}</span></li>
-                <li className="flex gap-3"><HiOutlineSparkles className="mt-0.5 h-4 w-4 text-bronze" /><span>{active.services}</span></li>
+                <li className="flex gap-3">
+                  <HiOutlineMapPin className="mt-0.5 h-4 w-4 text-bronze" />
+                  <span>{active.address}</span>
+                </li>
+                <li className="flex gap-3">
+                  <HiOutlinePhone className="mt-0.5 h-4 w-4 text-bronze" />
+                  <span>{active.phone}</span>
+                </li>
+                <li className="flex gap-3">
+                  <HiOutlineClock className="mt-0.5 h-4 w-4 text-bronze" />
+                  <span>{active.hours}</span>
+                </li>
+                <li className="flex gap-3">
+                  <HiOutlineSparkles className="mt-0.5 h-4 w-4 text-bronze" />
+                  <span>{active.services}</span>
+                </li>
               </ul>
               <div className="mt-auto pt-8">
                 <div className="hairline" />
-                <p className="mt-4 text-xs text-muted-foreground">Tap any pin on the map to view outlet details.</p>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Tap any pin on the map to view outlet details.
+                </p>
               </div>
             </motion.div>
           </Reveal>
@@ -661,19 +1029,37 @@ function Gallery() {
     { src: habibi, label: "Restaurants", h: "" },
     { src: nuha, label: "Team", h: "" },
   ];
-  const categories = ["Restaurants", "Food", "Interiors", "Kitchen Operations", "Corporate Office", "Team"];
+  const categories = [
+    "Restaurants",
+    "Food",
+    "Interiors",
+    "Kitchen Operations",
+    "Corporate Office",
+    "Team",
+  ];
   return (
     <section id="gallery" className="relative py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <Reveal><Eyebrow>Gallery</Eyebrow></Reveal>
-            <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">A closer look at Fan Eateries.</h2></Reveal>
+            <Reveal>
+              <Eyebrow>Gallery</Eyebrow>
+            </Reveal>
+            <Reveal delay={1}>
+              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+                A closer look at Fan Eateries.
+              </h2>
+            </Reveal>
           </div>
           <Reveal delay={2}>
             <div className="flex flex-wrap gap-2">
               {categories.map((c) => (
-                <span key={c} className="rounded-full border border-border bg-surface px-4 py-1.5 text-[12px] text-foreground/80">{c}</span>
+                <span
+                  key={c}
+                  className="rounded-full border border-border bg-surface px-4 py-1.5 text-[12px] text-foreground/80"
+                >
+                  {c}
+                </span>
               ))}
             </div>
           </Reveal>
@@ -683,9 +1069,16 @@ function Gallery() {
           {items.map((it, i) => (
             <Reveal key={i} delay={i} className={it.h}>
               <div className="group relative h-full w-full overflow-hidden rounded-3xl">
-                <img src={it.src} alt={it.label} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110" />
+                <img
+                  src={it.src}
+                  alt={it.label}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                />
                 <div className="absolute inset-x-4 bottom-4 flex translate-y-2 items-center justify-between opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="glass rounded-full px-3 py-1 text-[11px] font-medium">{it.label}</span>
+                  <span className="glass rounded-full px-3 py-1 text-[11px] font-medium">
+                    {it.label}
+                  </span>
                   <HiArrowUpRight className="h-4 w-4 text-white drop-shadow" />
                 </div>
               </div>
@@ -707,8 +1100,16 @@ function Partners() {
     <section className="relative py-24" style={{ background: "var(--pearl)" }}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <Reveal><div className="flex justify-center"><Eyebrow>Delivery & Dining Partners</Eyebrow></div></Reveal>
-          <Reveal delay={1}><h2 className="display mt-6 text-3xl md:text-4xl">Order and reserve through India's leading platforms.</h2></Reveal>
+          <Reveal>
+            <div className="flex justify-center">
+              <Eyebrow>Delivery & Dining Partners</Eyebrow>
+            </div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="display mt-6 text-3xl md:text-4xl">
+              Order and reserve through India's leading platforms.
+            </h2>
+          </Reveal>
         </div>
         <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-5">
           {partners.map((p, i) => (
@@ -744,14 +1145,25 @@ function Why() {
     <section className="relative py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal><div className="flex justify-center"><Eyebrow>Why Fan Eateries</Eyebrow></div></Reveal>
-          <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">A partner built to be relied on.</h2></Reveal>
+          <Reveal>
+            <div className="flex justify-center">
+              <Eyebrow>Why Fan Eateries</Eyebrow>
+            </div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+              A partner built to be relied on.
+            </h2>
+          </Reveal>
         </div>
         <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {items.map(([t, d], i) => (
             <Reveal key={t} delay={i}>
               <div className="glass group relative h-full overflow-hidden rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:bg-white/90">
-                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" style={{ background: "oklch(0.88 0.08 82 / 0.7)" }} />
+                <div
+                  className="absolute -right-8 -top-8 h-32 w-32 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                  style={{ background: "oklch(0.88 0.08 82 / 0.7)" }}
+                />
                 <div className="relative flex items-start justify-between">
                   <span className="grid h-11 w-11 place-items-center rounded-2xl gold-gradient text-white">
                     <HiOutlineSparkles className="h-5 w-5" />
@@ -790,25 +1202,44 @@ function Enquiry() {
     window.open(url, "_blank");
   };
 
-  const field = "glass w-full rounded-2xl bg-white/70 px-5 py-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/60";
+  const field =
+    "glass w-full rounded-2xl bg-white/70 px-5 py-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/60";
 
   return (
-    <section id="enquiry" className="relative py-28 md:py-40" style={{ background: "var(--pearl)" }}>
+    <section
+      id="enquiry"
+      className="relative py-28 md:py-40"
+      style={{ background: "var(--pearl)" }}
+    >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Reveal><Eyebrow>Business Enquiries</Eyebrow></Reveal>
-            <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Let's talk partnership.</h2></Reveal>
+            <Reveal>
+              <Eyebrow>Business Enquiries</Eyebrow>
+            </Reveal>
+            <Reveal delay={1}>
+              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
+                Let's talk partnership.
+              </h2>
+            </Reveal>
             <Reveal delay={2}>
               <p className="mt-6 text-lg text-muted-foreground">
-                For investors, landlords, franchise conversations, corporate catering, and supplier partnerships — send us a note and we'll respond on WhatsApp.
+                For investors, landlords, franchise conversations, corporate catering, and supplier
+                partnerships — send us a note and we'll respond on WhatsApp.
               </p>
             </Reveal>
             <Reveal delay={3}>
               <div className="mt-10 space-y-3 text-sm">
-                <div className="flex items-center gap-3"><FaWhatsapp className="h-4 w-4 text-bronze" /> WhatsApp Business</div>
-                <div className="flex items-center gap-3"><HiOutlineEnvelope className="h-4 w-4 text-bronze" /> partnerships@faneateries.com</div>
-                <div className="flex items-center gap-3"><HiOutlineChatBubbleLeftRight className="h-4 w-4 text-bronze" /> Response within 24 hours</div>
+                <div className="flex items-center gap-3">
+                  <FaWhatsapp className="h-4 w-4 text-bronze" /> WhatsApp Business
+                </div>
+                <div className="flex items-center gap-3">
+                  <HiOutlineEnvelope className="h-4 w-4 text-bronze" /> partnerships@faneateries.com
+                </div>
+                <div className="flex items-center gap-3">
+                  <HiOutlineChatBubbleLeftRight className="h-4 w-4 text-bronze" /> Response within
+                  24 hours
+                </div>
               </div>
             </Reveal>
           </div>
@@ -816,14 +1247,46 @@ function Enquiry() {
           <Reveal delay={2} className="lg:col-span-7">
             <form onSubmit={submit} className="glass-strong rounded-[2rem] p-8 md:p-10">
               <div className="grid gap-4 md:grid-cols-2">
-                <input required className={field} placeholder="Full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-                <input className={field} placeholder="Company" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />
-                <input type="email" required className={field} placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-                <input className={field} placeholder="Phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+                <input
+                  required
+                  className={field}
+                  placeholder="Full name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
+                <input
+                  className={field}
+                  placeholder="Company"
+                  value={form.company}
+                  onChange={(e) => setForm({ ...form, company: e.target.value })}
+                />
+                <input
+                  type="email"
+                  required
+                  className={field}
+                  placeholder="Email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+                <input
+                  className={field}
+                  placeholder="Phone"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                />
               </div>
-              <textarea required rows={5} className={`${field} mt-4`} placeholder="Tell us about your enquiry" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+              <textarea
+                required
+                rows={5}
+                className={`${field} mt-4`}
+                placeholder="Tell us about your enquiry"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+              />
               <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-muted-foreground">Sending will open WhatsApp with your message pre-filled.</p>
+                <p className="text-xs text-muted-foreground">
+                  Sending will open WhatsApp with your message pre-filled.
+                </p>
                 <PrimaryButton type="submit">Send Enquiry</PrimaryButton>
               </div>
             </form>
@@ -844,32 +1307,60 @@ function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Reveal><Eyebrow>Contact</Eyebrow></Reveal>
-            <Reveal delay={1}><h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Corporate office.</h2></Reveal>
+            <Reveal>
+              <Eyebrow>Contact</Eyebrow>
+            </Reveal>
+            <Reveal delay={1}>
+              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Corporate office.</h2>
+            </Reveal>
 
             <div className="mt-10 space-y-6 text-sm">
               <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass"><HiOutlineMapPin className="h-4 w-4" /></span>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
+                  <HiOutlineMapPin className="h-4 w-4" />
+                </span>
                 <div>
                   <div className="font-medium text-foreground">Fan Eateries HQ</div>
-                  <div className="text-muted-foreground">100 Feet Rd, Indiranagar, Bangalore 560038, India</div>
+                  <div className="text-muted-foreground">
+                    100 Feet Rd, Indiranagar, Bangalore 560038, India
+                  </div>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass"><HiOutlinePhone className="h-4 w-4" /></span>
-                <div><div className="font-medium">Phone</div><div className="text-muted-foreground">+91 80 4000 0000</div></div>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
+                  <HiOutlinePhone className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="font-medium">Phone</div>
+                  <div className="text-muted-foreground">+91 80 4000 0000</div>
+                </div>
               </div>
               <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass"><HiOutlineEnvelope className="h-4 w-4" /></span>
-                <div><div className="font-medium">Email</div><div className="text-muted-foreground">hello@faneateries.com</div></div>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
+                  <HiOutlineEnvelope className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="font-medium">Email</div>
+                  <div className="text-muted-foreground">hello@faneateries.com</div>
+                </div>
               </div>
               <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass"><FaWhatsapp className="h-4 w-4" /></span>
-                <div><div className="font-medium">WhatsApp Business</div><div className="text-muted-foreground">+91 80000 00000</div></div>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
+                  <FaWhatsapp className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="font-medium">WhatsApp Business</div>
+                  <div className="text-muted-foreground">+91 80000 00000</div>
+                </div>
               </div>
               <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass"><HiOutlineClock className="h-4 w-4" /></span>
-                <div><div className="font-medium">Business Hours</div><div className="text-muted-foreground">Mon — Sat · 10:00 to 19:00</div></div>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
+                  <HiOutlineClock className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="font-medium">Business Hours</div>
+                  <div className="text-muted-foreground">Mon — Sat · 10:00 to 19:00</div>
+                </div>
               </div>
             </div>
           </div>
@@ -902,15 +1393,22 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-full gold-gradient text-xs font-semibold text-white">FE</span>
+              <span className="grid h-10 w-10 place-items-center rounded-full gold-gradient text-xs font-semibold text-white">
+                FE
+              </span>
               <span className="display text-2xl">Fan Eateries</span>
             </div>
             <p className="mt-5 max-w-md text-sm text-muted-foreground">
-              A modern hospitality company operating a portfolio of distinctive restaurant brands from Bangalore.
+              A modern hospitality company operating a portfolio of distinctive restaurant brands
+              from Bangalore.
             </p>
             <div className="mt-6 flex gap-2">
               {[FaInstagram, FaLinkedin, FaFacebook, FaWhatsapp].map((Icon, i) => (
-                <a key={i} href="#" className="glass grid h-10 w-10 place-items-center rounded-full text-foreground/80 transition-colors hover:text-foreground">
+                <a
+                  key={i}
+                  href="#"
+                  className="glass grid h-10 w-10 place-items-center rounded-full text-foreground/80 transition-colors hover:text-foreground"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
@@ -920,8 +1418,22 @@ function Footer() {
           <div className="md:col-span-3">
             <div className="eyebrow">Navigate</div>
             <ul className="mt-5 space-y-3 text-sm">
-              {[["About", "#about"], ["Brands", "#brands"], ["Leadership", "#leadership"], ["Presence", "#presence"], ["Gallery", "#gallery"], ["Contact", "#contact"]].map(([l, h]) => (
-                <li key={h}><a href={h} className="text-muted-foreground transition-colors hover:text-foreground">{l}</a></li>
+              {[
+                ["About", "#about"],
+                ["Brands", "#brands"],
+                ["Leadership", "#leadership"],
+                ["Presence", "#presence"],
+                ["Gallery", "#gallery"],
+                ["Contact", "#contact"],
+              ].map(([l, h]) => (
+                <li key={h}>
+                  <a
+                    href={h}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {l}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -941,8 +1453,12 @@ function Footer() {
         <div className="mt-6 flex flex-col-reverse items-start justify-between gap-4 text-xs text-muted-foreground md:flex-row md:items-center">
           <div>© {new Date().getFullYear()} Fan Eateries. All rights reserved.</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground">Terms</a>
+            <a href="#" className="hover:text-foreground">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-foreground">
+              Terms
+            </a>
             <a href="#top" className="inline-flex items-center gap-1 hover:text-foreground">
               Back to top <HiArrowUp className="h-3 w-3" />
             </a>
