@@ -17,13 +17,15 @@ import { FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa"
 
 import hero from "@/assets/hero.jpg";
 import habibi from "@/assets/habibi.png";
+import coffee from "@/assets/coffee.jpg";
+import mm1 from "@/assets/mm1.jpg";
 import mandi from "@/assets/mandi.jpg";
 import nuha from "@/assets/nuha.jpg";
 import mentor from "@/assets/mentor.jpg";
 import director1 from "@/assets/director1.jpg";
 import director2 from "@/assets/director2.jpg";
 import director3 from "@/assets/director3.jpg";
-import g1 from "@/assets/g1.jpg";
+import g1 from "@/assets/g1.png";
 import g2 from "@/assets/g2.jpg";
 import g3 from "@/assets/g3.jpg";
 import g4 from "@/assets/g4.jpg";
@@ -478,7 +480,7 @@ const brands: Brand[] = [
     ],
   },
   {
-    name: "Nuha Cafe",
+    name: "Nuha Patisserie & Cafe",
     monogram: "NC",
     cuisine: "Specialty Coffee & All-Day Cafe",
     description:
@@ -627,8 +629,11 @@ function Leadership() {
               <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
 
               <p className="mt-4 text-muted-foreground leading-7">
-                A senior hospitality mind whose counsel shapes strategy, standards and long-term
-                direction—quietly present in every major decision the group takes.
+                A visionary leader whose principles, foresight, and unwavering commitment to
+                excellence have been instrumental in shaping the organization's foundation. Through
+                decades of experience and strategic guidance, they have fostered a culture of
+                integrity, innovation, and sustainable growth, leaving a lasting influence on the
+                company's leadership and long-term success.
               </p>
 
               <figure className="mt-8 border-t border-gold/20 pt-6">
@@ -662,8 +667,11 @@ function Leadership() {
               <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
 
               <p className="mt-4 text-muted-foreground leading-7">
-                A senior hospitality mind whose counsel shapes strategy, standards and long-term
-                direction—quietly present in every major decision the group takes.
+                A respected leader recognized for exceptional wisdom, steadfast values, and an
+                enduring commitment to organizational excellence. Their guidance has played a
+                pivotal role in strengthening the company's vision, empowering its leadership, and
+                driving a legacy of responsible growth, operational excellence, and lasting
+                stakeholder value.
               </p>
 
               <figure className="mt-8 border-t border-gold/20 pt-6">
@@ -677,8 +685,8 @@ function Leadership() {
 
         <Reveal delay={2}>
           <p className="mx-auto mt-16 max-w-2xl text-center text-muted-foreground">
-            The three directors are brothers — leading Fan Eateries together under the guidance of
-            their mentor.
+            The three directors lead Fan Eateries with a shared vision, driving innovation,
+            operational excellence, and sustainable growth under the guidance of their mentors.
           </p>
         </Reveal>
 
@@ -734,95 +742,113 @@ const locations: Location[] = [
     name: "Habibi — Koramangala",
     x: 58,
     y: 60,
-    address: "80 Feet Rd, Koramangala 4th Block",
-    phone: "+91 80 4000 1201",
-    hours: "11:00 — 23:00",
+    address:
+      "No 28,Ground Floor, Koramangala Industrial Layout, 5th Block, Koramangala, Bengaluru, Karnataka 560095",
+    phone: "+91 9742777705",
+    hours: "11:00 AM — 11:00 PM",
     services: "Dine-in · Takeaway · Delivery",
-    color: "oklch(0.72 0.12 78)",
+    color: "oklch(0.42 0.11 150)",
   },
   {
     id: "hfc-2",
     brand: "Habibi Fried Chicken",
-    name: "Habibi — HSR Layout",
+    name: "Habibi — HRBR Layout",
     x: 66,
     y: 70,
-    address: "27th Main, HSR Sector 2",
-    phone: "+91 80 4000 1202",
-    hours: "11:00 — 23:00",
+    address:
+      "CLUB HOUSE, 418, 5th Main Rd, HRBR Layout 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+    phone: "+91 9742777705",
+    hours: "11:00 AM — 11:00 PM",
     services: "Dine-in · Delivery",
-    color: "oklch(0.72 0.12 78)",
+    color: "oklch(0.42 0.11 150)",
+  },
+  {
+    id: "hfc-3",
+    brand: "Habibi Fried Chicken",
+    name: "Habibi(cloud) — Indranagar",
+    x: 56,
+    y: 34,
+    address:
+      "CLUB HOUSE, 418, 5th Main Rd, HRBR Layout 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+    phone: "+91 9742777705",
+    hours: "11:00 AM — 11:00 PM",
+    services: "Delivery",
+    color: "oklch(0.56 0.14 245)",
   },
   {
     id: "mm-1",
     brand: "Mashriq Mandi",
-    name: "Mashriq — Frazer Town",
+    name: "Mashriq — Indranagar",
     x: 52,
     y: 32,
-    address: "Mosque Rd, Frazer Town",
-    phone: "+91 80 4000 1301",
-    hours: "12:00 — 23:30",
+    address:
+      "First Floor, No 12, Shri Krishna Temple Rd, Indira Nagar 1st Stage, Indiranagar, Bengaluru, Karnataka 560038",
+    phone: "+91 9742777750",
+    hours: "11:00 AM — 11:30 PM",
     services: "Dine-in · Takeaway · Delivery",
-    color: "oklch(0.55 0.09 55)",
+    color: "oklch(0.65 0.24 25)",
   },
   {
     id: "mm-2",
     brand: "Mashriq Mandi",
-    name: "Mashriq — Shivajinagar",
+    name: "Mashriq — Koramangala",
+    x: 60,
+    y: 62,
+    address: "2nd Floor, 122/B, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095	",
+    phone: "+91 9742777750",
+    hours: "11:00 AM — 11:30 PM",
+    services: "Dine-in · Takeaway · Delivery",
+    color: "oklch(0.65 0.24 25)",
+  },
+  {
+    id: "mm-3",
+    brand: "Mashriq Mandi",
+    name: "Mashriq — HRBR Layout",
+    x: 68,
+    y: 72,
+    address: "2nd Floor, 122/B, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095	",
+    phone: "+91 9742777750",
+    hours: "11:00 AM — 11:30 PM",
+    services: "Dine-in · Takeaway · Delivery",
+    color: "oklch(0.65 0.24 25)",
+  },
+  {
+    id: "mm-4",
+    brand: "Mashriq & Habibi",
+    name: "Mashriq & Habibi(cloud) — Sarjapura",
     x: 44,
     y: 38,
-    address: "Commercial St Cross, Shivajinagar",
-    phone: "+91 80 4000 1302",
-    hours: "12:00 — 23:30",
-    services: "Dine-in · Delivery",
-    color: "oklch(0.55 0.09 55)",
+    address:
+      "1ST FLOOR, shree complex, 65/1a, Sarjapur Main Rd, Kaikondrahalli, Bengaluru, Karnataka 560035	",
+    phone: "+91 9742777750",
+    hours: "11:00 AM — 11:30 PM",
+    services: "Delivery",
+    color: "oklch(0.56 0.14 245)",
   },
   {
     id: "nc-1",
     brand: "Nuha Cafe",
-    name: "Nuha — Indiranagar",
+    name: "Nuha Patisserie & Cafe — Indiranagar",
     x: 62,
     y: 42,
-    address: "100 Feet Rd, Indiranagar",
-    phone: "+91 80 4000 1401",
-    hours: "08:00 — 23:00",
+    address:
+      "Ground floor ,12, Shri Krishna Temple Rd, Indira Nagar 1st Stage,  Indiranagar, Bengaluru, Karnataka 560038",
+    phone: "+91 9513777780",
+    hours: "11:00 AM — 11:00 PM",
     services: "Dine-in · Takeaway · Delivery",
     color: "oklch(0.5 0.02 250)",
   },
   {
-    id: "nc-2",
-    brand: "Nuha Cafe",
-    name: "Nuha — Jayanagar",
-    x: 42,
-    y: 68,
-    address: "11th Main, Jayanagar 4th Block",
-    phone: "+91 80 4000 1402",
-    hours: "08:00 — 22:00",
-    services: "Dine-in · Delivery",
-    color: "oklch(0.5 0.02 250)",
-  },
-  {
-    id: "ck",
-    brand: "Cloud Kitchen",
-    name: "Cloud Kitchen — Bommanahalli",
-    x: 60,
-    y: 82,
-    address: "Hosur Rd, Bommanahalli",
-    phone: "+91 80 4000 1500",
-    hours: "10:00 — 23:00",
-    services: "Delivery only",
-    color: "oklch(0.78 0.11 82)",
-  },
-  {
     id: "cpk",
-    brand: "Central Production Kitchen",
-    name: "Central Production Kitchen",
+    brand: "Central Kitchen",
+    name: "Central Kitchen — Bommanahalli",
     x: 30,
     y: 52,
-    address: "Peenya Industrial Area, Bangalore",
-    phone: "+91 80 4000 1600",
-    hours: "06:00 — 20:00",
-    services: "Production & Distribution",
-    color: "oklch(0.32 0.02 250)",
+    address: "No 79, 1/2, Mangammanapalya Main Rd, Bommanahalli, Bengaluru, Karnataka 560068",
+    phone: "+91 73537 77740",
+    hours: "09:00 AM — 10:00 PM",
+    services: "Cloud Kitchen for all outlets",
+    color: " oklch(0.48 0.06 45)    ",
     note: "Our primary production facility where food products, marinades, sauces, ingredients and prepared items are produced and distributed to all Fan Eateries outlets — ensuring consistent quality and standardised taste across the group.",
   },
 ];
@@ -830,11 +856,11 @@ const locations: Location[] = [
 function Presence() {
   const [active, setActive] = useState<Location>(locations[0]);
   const legend = [
-    ["Habibi Fried Chicken", "oklch(0.72 0.12 78)"],
-    ["Mashriq Mandi", "oklch(0.55 0.09 55)"],
-    ["Nuha Cafe", "oklch(0.5 0.02 250)"],
-    ["Cloud Kitchen", "oklch(0.78 0.11 82)"],
-    ["Central Production Kitchen", "oklch(0.32 0.02 250)"],
+    ["Habibi Fried Chicken", "oklch(0.42 0.11 150)"],
+    ["Mashriq Mandi", "oklch(0.65 0.24 25)"],
+    ["Nuha Cafe", "oklch(0.50 0.05 50)"],
+    ["Cloud Kitchen", "oklch(0.56 0.14 245)"],
+    ["Central Production Kitchen", " oklch(0.48 0.06 45)"],
   ] as const;
 
   return (
@@ -1024,10 +1050,10 @@ function Gallery() {
   const items = [
     { src: g1, label: "Interiors", h: "row-span-2" },
     { src: g2, label: "Food", h: "" },
-    { src: g3, label: "Kitchen Operations", h: "" },
-    { src: g4, label: "Corporate Office", h: "row-span-2" },
-    { src: habibi, label: "Restaurants", h: "" },
-    { src: nuha, label: "Team", h: "" },
+    { src: g3, label: "HFC", h: "" },
+    { src: g4, label: "Interiors", h: "row-span-2" },
+    { src: coffee, label: "Beverages", h: "" },
+    { src: mm1, label: "Food", h: "" },
   ];
   const categories = [
     "Restaurants",
@@ -1187,7 +1213,7 @@ function Why() {
 
 function Enquiry() {
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "" });
-  const BUSINESS_NUMBER = "918000000000"; // placeholder — update with real number
+  const BUSINESS_NUMBER = "9845410770"; // placeholder — update with real number
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -1218,9 +1244,7 @@ function Enquiry() {
               <Eyebrow>Business Enquiries</Eyebrow>
             </Reveal>
             <Reveal delay={1}>
-              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">
-                Let's talk partnership.
-              </h2>
+              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Let's talk.</h2>
             </Reveal>
             <Reveal delay={2}>
               <p className="mt-6 text-lg text-muted-foreground">
@@ -1234,7 +1258,7 @@ function Enquiry() {
                   <FaWhatsapp className="h-4 w-4 text-bronze" /> WhatsApp Business
                 </div>
                 <div className="flex items-center gap-3">
-                  <HiOutlineEnvelope className="h-4 w-4 text-bronze" /> partnerships@faneateries.com
+                  <HiOutlineEnvelope className="h-4 w-4 text-bronze" /> faneateries@gmail.com
                 </div>
                 <div className="flex items-center gap-3">
                   <HiOutlineChatBubbleLeftRight className="h-4 w-4 text-bronze" /> Response within
@@ -1311,7 +1335,7 @@ function Contact() {
               <Eyebrow>Contact</Eyebrow>
             </Reveal>
             <Reveal delay={1}>
-              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Corporate office.</h2>
+              <h2 className="display mt-6 text-4xl md:text-5xl lg:text-6xl">Fan Eateries</h2>
             </Reveal>
 
             <div className="mt-10 space-y-6 text-sm">
@@ -1320,9 +1344,10 @@ function Contact() {
                   <HiOutlineMapPin className="h-4 w-4" />
                 </span>
                 <div>
-                  <div className="font-medium text-foreground">Fan Eateries HQ</div>
+                  <div className="font-medium text-foreground">Fan Eateries Corporate office</div>
                   <div className="text-muted-foreground">
-                    100 Feet Rd, Indiranagar, Bangalore 560038, India
+                    3rd floor, No 16, 5th Cross Rd, KHB Colony, 6th Block, Koramangala, Bengaluru,
+                    Karnataka 560095
                   </div>
                 </div>
               </div>
@@ -1332,7 +1357,7 @@ function Contact() {
                 </span>
                 <div>
                   <div className="font-medium">Phone</div>
-                  <div className="text-muted-foreground">+91 80 4000 0000</div>
+                  <div className="text-muted-foreground">+91 9845410770</div>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -1341,16 +1366,7 @@ function Contact() {
                 </span>
                 <div>
                   <div className="font-medium">Email</div>
-                  <div className="text-muted-foreground">hello@faneateries.com</div>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full glass">
-                  <FaWhatsapp className="h-4 w-4" />
-                </span>
-                <div>
-                  <div className="font-medium">WhatsApp Business</div>
-                  <div className="text-muted-foreground">+91 80000 00000</div>
+                  <div className="text-muted-foreground">faneateries@gmail.com</div>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -1359,7 +1375,7 @@ function Contact() {
                 </span>
                 <div>
                   <div className="font-medium">Business Hours</div>
-                  <div className="text-muted-foreground">Mon — Sat · 10:00 to 19:00</div>
+                  <div className="text-muted-foreground">Mon — Sat · 10:00 AM to 5:00 PM</div>
                 </div>
               </div>
             </div>
@@ -1368,11 +1384,13 @@ function Contact() {
           <Reveal delay={2} className="lg:col-span-7">
             <div className="overflow-hidden rounded-[2rem] shadow-[var(--shadow-lift)]">
               <iframe
-                title="Fan Eateries HQ — Bangalore"
-                src="https://www.google.com/maps?q=Indiranagar%20Bangalore&output=embed"
+                title="Fan Eateries Corporate Office — Bangalore"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15554.794724675989!2d77.60513314532933!3d12.927077812131488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f4fa836b49%3A0x16c19276f07b14c6!2sFAN%20EATERIES%20Corporate%20Office!5e0!3m2!1sen!2sin!4v1783322982267!5m2!1sen!2sin"
                 className="h-[520px] w-full grayscale-[0.15]"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0 }}
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </Reveal>
@@ -1443,7 +1461,7 @@ function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               <li>Habibi Fried Chicken</li>
               <li>Mashriq Mandi</li>
-              <li>Nuha Cafe</li>
+              <li>Nuha Patisserie & Cafe</li>
             </ul>
           </div>
         </div>
