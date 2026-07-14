@@ -584,9 +584,24 @@ function Brands() {
 
 function Leadership() {
   const directors = [
-    { name: "Arbaz Sharrif", role: "Director — Habibi Fried Chicken", img: director1 },
-    { name: "Faraz Sharrif", role: "Director — Mashriq Mandi", img: director2 },
-    { name: "Nuha Sharrif", role: "Director — Nuha Patisserie and Cafe", img: director3 },
+    {
+      name: "Arbaz Sharrif",
+      role: "Director — Habibi Fried Chicken",
+      img: director1,
+      position: "object-[center_15%]",
+    },
+    {
+      name: "Faraz Sharrif",
+      role: "Director — Mashriq Mandi",
+      img: director2,
+      position: "object-[center_5%]",
+    },
+    {
+      name: "Nuha Sharrif",
+      role: "Director — Nuha Patisserie and Cafe",
+      img: director3,
+      position: "object-[center_20%]",
+    },
   ];
 
   return (
@@ -701,7 +716,9 @@ function Leadership() {
                     loading="lazy"
                     width={1024}
                     height={1280}
-                    className="h-80 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                    className={`h-80 w-full object-cover ${d.position}
+    transition-transform duration-[1200ms]
+    group-hover:scale-105`}
                   />
                 </div>
                 <div className="p-7">
