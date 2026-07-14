@@ -19,12 +19,13 @@ import hero from "@/assets/hero.jpg";
 import habibi from "@/assets/habibi.png";
 import coffee from "@/assets/coffee.jpg";
 import mm1 from "@/assets/mm1.jpg";
-import mandi from "@/assets/mandi.jpg";
+import mandi from "@/assets/mandi.png";
 import nuha from "@/assets/nuha.jpg";
-import mentor from "@/assets/mentor.jpg";
-import director1 from "@/assets/director1.jpg";
-import director2 from "@/assets/director2.jpg";
-import director3 from "@/assets/director3.jpg";
+import mentor1 from "@/assets/mentor1.png";
+import mentor2 from "@/assets/mentor22.png";
+import director1 from "@/assets/director1.png";
+import director2 from "@/assets/director2.png";
+import director3 from "@/assets/director3.png";
 import g1 from "@/assets/g1.png";
 import g2 from "@/assets/g2.jpg";
 import g3 from "@/assets/g3.jpg";
@@ -610,30 +611,30 @@ function Leadership() {
           <Reveal delay={1}>
             <article className="h-full flex flex-col items-center rounded-[2.25rem] bg-white shadow-[var(--shadow-lift)] p-10 text-center">
               <img
-                src={mentor}
+                src={mentor1}
                 alt="Executive Mentor"
                 loading="lazy"
                 width={220}
                 height={220}
-                className="h-44 w-44 rounded-full object-cover border-4 border-gold shadow-lg"
+                className="h-55 w-55 rounded-full object-cover border-4 border-gold shadow-lg"
               />
 
               <div className="mt-6 glass rounded-full px-5 py-2">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-bronze">
-                  Mentor & Strategic Advisor
+                  Mentor
                 </span>
               </div>
 
               <Eyebrow className="mt-6">Navaj Sharief</Eyebrow>
 
-              <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
+              <h3 className="display mt-3 text-3xl"></h3>
 
               <p className="mt-4 text-muted-foreground leading-7">
-                A visionary leader whose principles, foresight, and unwavering commitment to
-                excellence have been instrumental in shaping the organization's foundation. Through
-                decades of experience and strategic guidance, they have fostered a culture of
-                integrity, innovation, and sustainable growth, leaving a lasting influence on the
-                company's leadership and long-term success.
+                A visionary entrepreneur with over three decades of experience in the food industry,
+                Nawaz A. Sharief pioneered the organized biryani QSR segment through iconic brands
+                like Ammi's Biryani and Sharief Bhai. Having built and scaled over 180 restaurant
+                outlets, he mentors Fan Eateries on strategy, brand building, and sustainable
+                growth.
               </p>
 
               <figure className="mt-8 border-t border-gold/20 pt-6">
@@ -648,30 +649,29 @@ function Leadership() {
           <Reveal delay={1.2}>
             <article className="h-full flex flex-col items-center rounded-[2.25rem] bg-white shadow-[var(--shadow-lift)] p-10 text-center">
               <img
-                src={mentor}
+                src={mentor2}
                 alt="Executive Mentor"
                 loading="lazy"
                 width={220}
                 height={220}
-                className="h-44 w-44 rounded-full object-cover border-4 border-gold shadow-lg"
+                className="h-55 w-55 rounded-full object-cover border-4 border-gold shadow-lg"
               />
 
               <div className="mt-6 glass rounded-full px-5 py-2">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-bronze">
-                  Mentor & Strategic Advisor
+                  Mentor
                 </span>
               </div>
 
-              <Eyebrow className="mt-6">Mrs. Navaj Sharief</Eyebrow>
+              <Eyebrow className="mt-6">Falak Nawaz Shariff</Eyebrow>
 
-              <h3 className="display mt-3 text-3xl">A Guiding Hand Behind Fan Eateries</h3>
+              <h3 className="display mt-3 text-3xl"></h3>
 
               <p className="mt-4 text-muted-foreground leading-7">
-                A respected leader recognized for exceptional wisdom, steadfast values, and an
-                enduring commitment to organizational excellence. Their guidance has played a
-                pivotal role in strengthening the company's vision, empowering its leadership, and
-                driving a legacy of responsible growth, operational excellence, and lasting
-                stakeholder value.
+                An experienced food business operator with deep expertise in central kitchen
+                management, procurement, and operational excellence. Falak Nawaz Shariff mentors Fan
+                Eateries in building scalable systems, strengthening supply chains, and driving
+                operational efficiency across all brands.
               </p>
 
               <figure className="mt-8 border-t border-gold/20 pt-6">
